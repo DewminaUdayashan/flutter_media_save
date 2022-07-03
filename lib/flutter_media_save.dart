@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'flutter_media_save_platform_interface.dart';
 
 class FlutterMediaSave {
-  Future<String?> getPlatformVersion() {
+  Future<int?> getPlatformVersion() {
     return FlutterMediaSavePlatform.instance.getPlatformVersion();
   }
 
