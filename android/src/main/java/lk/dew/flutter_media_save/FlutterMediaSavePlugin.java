@@ -43,7 +43,7 @@ public class FlutterMediaSavePlugin implements FlutterPlugin, MethodCallHandler 
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("getPlatformVersion")) {
-      result.success("Android " + android.os.Build.VERSION.RELEASE);
+      result.success(Build.VERSION.SDK_INT);
     }else if (call.method.equals("saveFile")) {
       final Map<String, Object> args = call.arguments();
       final byte[] bytes = (byte[]) args.get("bytes");

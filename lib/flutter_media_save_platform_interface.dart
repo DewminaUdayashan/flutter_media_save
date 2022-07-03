@@ -25,7 +25,7 @@ abstract class FlutterMediaSavePlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
+  Future<int?> getPlatformVersion() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 

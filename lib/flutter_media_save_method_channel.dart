@@ -12,9 +12,8 @@ class MethodChannelFlutterMediaSave extends FlutterMediaSavePlatform {
   final methodChannel = const MethodChannel('flutter_media_save');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version =
-        await methodChannel.invokeMethod<String>('getPlatformVersion');
+  Future<int?> getPlatformVersion() async {
+    final version = await methodChannel.invokeMethod<int>('getPlatformVersion');
     return version;
   }
 
